@@ -6,6 +6,7 @@ ruby '2.5.3'
 gem 'fast_jsonapi'
 gem 'rspec-rails'
 gem 'figaro'
+gem 'faraday'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
