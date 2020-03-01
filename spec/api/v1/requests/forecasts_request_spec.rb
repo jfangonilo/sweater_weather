@@ -8,6 +8,6 @@ RSpec.describe "Sweather Weather API" do
 
     expect(response).to be_successful
     forecast = JSON.parse(response.body, symbolize_names: true)
-    expect(background[:data][:type]).to eq 'forecast'
+    expect(forecast[:data][:type]).to eq 'forecast'
   end
 end
