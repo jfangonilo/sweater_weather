@@ -9,6 +9,10 @@ class GeocodeService
     get_json[:results][0][:geometry][:location]
   end
 
+  def formatted_location
+    get_json[:results][0][:formatted_address]
+  end
+
   def get_json
     response = conn.get
     JSON.parse(response.body, symbolize_names: true)

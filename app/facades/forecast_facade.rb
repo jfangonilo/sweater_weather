@@ -1,8 +1,13 @@
 class ForecastFacade
-  attr_reader :location
+  attr_reader :id, :location
 
   def initialize(location)
     @location = location
+    @id = nil
+  end
+
+  def city_state
+    geocode.formatted_location
   end
 
   def lat_lng
@@ -18,6 +23,6 @@ class ForecastFacade
   end
 
   def darksky
-    @darksky ||= DarkskyService.new(geocode.lat_lng)
+    @darksky ||= DarkskyService.new(lat_lng)
   end
 end
