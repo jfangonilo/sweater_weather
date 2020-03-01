@@ -4,7 +4,7 @@ RSpec.describe "Sweater Weather API" do
   it 'can get a background for a city' do
     city = 'denver,co'
 
-    get "/api/v1/background?location=#{city}"
+    get "/api/v1/backgrounds?location=#{city}"
 
     expect(response).to be_successful
   end
