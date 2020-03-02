@@ -15,6 +15,10 @@ class MunchiesFacade
     directions.travel_time
   end
 
+  def destination
+    directions.destination_coordinates
+  end
+
   def directions
     @geocode ||= DirectionsService.new(params)
   end

@@ -11,6 +11,12 @@ class DirectionsService
     get_json[:routes][0][:legs][0][:duration][:value]
   end
 
+  def destination_coordinates
+    get_json[:routes][0][:legs][0][:end_location]
+  end
+
+  private
+
   def get_json
     response = conn.get
     JSON.parse(response.body, symbolize_names: true)
