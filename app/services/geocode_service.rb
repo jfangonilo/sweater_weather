@@ -13,6 +13,8 @@ class GeocodeService
     get_json[:results][0][:formatted_address]
   end
 
+  private
+
   def get_json
     response = conn.get
     JSON.parse(response.body, symbolize_names: true)

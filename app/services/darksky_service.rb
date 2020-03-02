@@ -11,6 +11,8 @@ class DarkskyService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  private
+
   def conn
     Faraday.new("https://api.darksky.net/forecast/#{ENV['DARKSKY_KEY']}/#{lat},#{lng}") do |f|
       f.adapter Faraday.default_adapter
