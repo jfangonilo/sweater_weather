@@ -6,7 +6,7 @@ class DarkskyService
     @lng = coordinates[:lng]
   end
 
-  def weather
+  def result
     response = conn.get
     JSON.parse(response.body, symbolize_names: true)
   end
