@@ -29,7 +29,9 @@ class ForecastFacade
   end
 
   def daily_weather
-    DailyWeather.new(forecast)
+    forecast[:daily][:data].first(5).map do |daily_data|
+      DailyWeather.new(daily_data)
+    end
   end
 
   def geocode
