@@ -53,6 +53,6 @@ class MunchiesFacade
   end
 
   def yelp
-    @yelp = YelpService.new(unix_arrival_time, destination_coords, food)
+    @yelp ||= YelpService.new(unix_arrival_time, destination_coords, food)
   end
 end
