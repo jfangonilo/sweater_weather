@@ -7,7 +7,11 @@ class TimetravelService
     @travel_time = travel_time
   end
 
-  def result
+  def forecast
+    get_json[:currently][:summary]
+  end
+
+  def get_json
     response = conn.get
     JSON.parse(response.body, symbolize_names: true)
   end

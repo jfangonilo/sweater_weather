@@ -18,7 +18,8 @@ class MunchiesFacade
   end
 
   def forecast
-    weather[:currently][:summary]
+    binding.pry
+    darksky.forecast
   end
 
   def unix_travel_time
@@ -27,10 +28,6 @@ class MunchiesFacade
 
   def destination_coords
     directions.destination_coordinates
-  end
-
-  def weather
-    darksky.result
   end
 
   def directions
