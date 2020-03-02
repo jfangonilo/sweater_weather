@@ -11,7 +11,7 @@ class BackgroundFacade
   end
 
   def background_collection
-    service.backgrounds[:photos][:photo]. map do |data|
+    service.backgrounds[:photos][:photo].map do |data|
       Background.new(data)
     end
   end
