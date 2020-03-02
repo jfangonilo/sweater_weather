@@ -11,15 +11,25 @@ class MunchiesFacade
     @params = params
   end
 
-  def travel_time
-    directions.travel_time
+  def unix_travel_time
+    directions.unix_travel_time
   end
 
-  def destination
+  def destination_coords
     directions.destination_coordinates
   end
 
+  def forecast
+    x = darksky.result
+    binding.pry
+    x
+  end
+
   def directions
-    @geocode ||= DirectionsService.new(params)
+    @directions ||= DirectionsService.new(params)
+  end
+
+  def darksky
+    @darksky ||= TimetravelService.new(destination_coords, unix_travel_time)
   end
 end
