@@ -4,6 +4,6 @@ class HourlyWeather
 
   def initialize(hourly_data)
     @temperature = hourly_data[:temperature]
-    @time = Time.at(hourly_data[:time])
+    @time = hourly_data[:time]
   end
 end

@@ -12,6 +12,6 @@ class CurrentWeather
     @temperature = forecast[:currently][:temperature]
     @high_temp = forecast[:daily][:data][0][:temperatureHigh]
     @low_temp = forecast[:daily][:data][0][:temperatureLow]
-    @time = DateTime.now
+    @time = forecast[:currently][:time]
   end
 end
