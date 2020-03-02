@@ -26,7 +26,9 @@ class MunchiesFacade
   end
 
   def restaurant
-
+    yelp.result[:businesses].map do |data|
+      Restaurant.new(data)
+    end
   end
 
   private
@@ -52,6 +54,6 @@ class MunchiesFacade
   end
 
   def yelp
-    @yelp = YelpService.new(unix_arrival_time, destination_coordinates, food)
+    @yelp = YelpService.new(unix_arrival_time, destination_coords, food)
   end
 end
