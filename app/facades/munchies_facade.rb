@@ -13,14 +13,19 @@ class MunchiesFacade
     @params = params
   end
 
+  def end_location
+    directions.end_location
+  end
+
   def travel_time
     directions.travel_time
   end
 
   def forecast
-    binding.pry
     darksky.forecast
   end
+
+  private
 
   def unix_travel_time
     directions.unix_travel_time
