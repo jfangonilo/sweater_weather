@@ -10,12 +10,24 @@ class ForecastFacade
     geocode.formatted_location
   end
 
-  def lat_lng
-    geocode.lat_lng
+  def forecast
+    darksky.result
   end
 
-  def weather
-    darksky.weather
+  def details
+    WeatherDetails.new(forecast)
+  end
+
+  def current_weather
+    CurrentWeather.new(forecast, city_state)
+  end
+
+  def hourly_weather
+    HourlyWeather.new(forecast)
+  end
+
+  def daily_weather
+    DailyWeather.new(forecast)
   end
 
   def geocode
@@ -23,6 +35,6 @@ class ForecastFacade
   end
 
   def darksky
-    @darksky ||= DarkskyService.new(lat_lng)
+    @darksky ||= DarkskyService.new(geocode.lat_lng)
   end
 end
