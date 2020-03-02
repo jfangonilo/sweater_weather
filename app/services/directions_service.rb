@@ -7,6 +7,10 @@ class DirectionsService
     @destination = params[:end]
   end
 
+  def travel_time
+    get_json[:routes][0][:legs][0][:duration][:text]
+  end
+
   def unix_travel_time
     get_json[:routes][0][:legs][0][:duration][:value]
   end

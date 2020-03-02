@@ -1,14 +1,20 @@
 class MunchiesFacade
-  attr_reader :start,
+  attr_reader :id,
+              :start,
               :end,
               :food,
               :params
 
   def initialize(params)
+    @id = nil
     @start = params[:start]
     @end = params[:end]
     @food = params[:food]
     @params = params
+  end
+
+  def travel_time
+    directions.travel_time
   end
 
   def unix_travel_time
@@ -19,10 +25,8 @@ class MunchiesFacade
     directions.destination_coordinates
   end
 
-  def forecast
-    x = darksky.result
-    binding.pry
-    x
+  def weather
+    darksky.result
   end
 
   def directions
