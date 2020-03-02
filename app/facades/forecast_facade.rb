@@ -23,7 +23,9 @@ class ForecastFacade
   end
 
   def hourly_weather
-    HourlyWeather.new(forecast)
+    forecast[:hourly][:data].first(8).map do |hourly_data|
+      HourlyWeather.new(hourly_data)
+    end
   end
 
   def daily_weather
