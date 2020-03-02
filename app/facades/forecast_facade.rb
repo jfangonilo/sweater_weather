@@ -6,14 +6,6 @@ class ForecastFacade
     @id = nil
   end
 
-  def city_state
-    geocode.formatted_location
-  end
-
-  def forecast
-    darksky.result
-  end
-
   def details
     WeatherDetails.new(forecast)
   end
@@ -34,11 +26,25 @@ class ForecastFacade
     end
   end
 
+  private
+
+  def city_state
+    geocode.formatted_location
+  end
+
+  def coordinates
+    geocode.lat_lng
+  end
+
+  def forecast
+    darksky.result
+  end
+
   def geocode
     @geocode ||= GeocodeService.new(location)
   end
 
   def darksky
-    @darksky ||= DarkskyService.new(geocode.lat_lng)
+    @darksky ||= DarkskyService.new(coordinates)
   end
 end
