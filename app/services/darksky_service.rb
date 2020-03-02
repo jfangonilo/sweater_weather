@@ -1,0 +1,21 @@
+class DarkskyService
+  attr_reader :lat, :lng
+
+  def initialize(coordinates)
+    @lat = coordinates[:lat]
+    @lng = coordinates[:lng]
+  end
+
+  def result
+    response = conn.get
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  private
+
+  def conn
+    Faraday.new("https://api.darksky.net/forecast/#{ENV['DARKSKY_KEY']}/#{lat},#{lng}") do |f|
+      f.adapter Faraday.default_adapter
+    end
+  end
+end
