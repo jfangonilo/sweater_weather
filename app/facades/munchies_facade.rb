@@ -25,10 +25,18 @@ class MunchiesFacade
     darksky.forecast
   end
 
+  def restaurant
+
+  end
+
   private
 
   def unix_travel_time
     directions.unix_travel_time
+  end
+
+  def unix_arrival_time
+    (Time.now + unix_travel_time).to_i
   end
 
   def destination_coords
@@ -40,6 +48,10 @@ class MunchiesFacade
   end
 
   def darksky
-    @darksky ||= TimetravelService.new(destination_coords, unix_travel_time)
+    @darksky ||= TimetravelService.new(destination_coords, unix_arrival_time)
+  end
+
+  def yelp
+    @yelp = YelpService.new(unix_arrival_time, destination_coordinates, food)
   end
 end

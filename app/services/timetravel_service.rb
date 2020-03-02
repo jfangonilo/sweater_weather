@@ -1,10 +1,10 @@
 class TimetravelService
-  attr_reader :lat, :lng, :travel_time
+  attr_reader :lat, :lng, :arrival_time
 
-  def initialize(coordinates, travel_time)
+  def initialize(coordinates, arrival_time)
     @lat = coordinates[:lat]
     @lng = coordinates[:lng]
-    @travel_time = travel_time
+    @arrival_time = arrival_time
   end
 
   def forecast
@@ -17,10 +17,6 @@ class TimetravelService
   end
 
   private
-
-  def arrival_time
-    (Time.now + travel_time).to_i
-  end
 
   def conn
     Faraday.new("https://api.darksky.net/forecast/#{ENV['DARKSKY_KEY']}/#{lat},#{lng},#{arrival_time}") do |f|
