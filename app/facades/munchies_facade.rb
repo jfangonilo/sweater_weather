@@ -17,6 +17,10 @@ class MunchiesFacade
     directions.travel_time
   end
 
+  def forecast
+    weather[:currently][:summary]
+  end
+
   def unix_travel_time
     directions.unix_travel_time
   end
