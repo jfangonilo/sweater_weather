@@ -26,9 +26,8 @@ class MunchiesFacade
   end
 
   def restaurant
-    yelp.result[:businesses].map do |data|
-      Restaurant.new(data)
-    end
+    data = yelp.result[:businesses][0]
+    Restaurant.new(data)
   end
 
   private
