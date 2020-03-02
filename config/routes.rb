@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :backgrounds, only: [:index]
       resources :forecast, only: [:index]
+      resources :munchies, only: [:index]
     end
   end
 end
