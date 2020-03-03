@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sweater Weather API' do
+RSpec.describe 'Sweater Weather API', :vcr do
   describe 'can receive a post request for a new user' do
     it 'and returns an api key if valid' do
       mock_data = {

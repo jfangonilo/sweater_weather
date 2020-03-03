@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sweater Weather API' do
+RSpec.describe 'Sweater Weather API', :vcr do
   describe 'can receive a request for a road_trip' do
     it 'and returns a response if request is valid' do
       create(:user, api_key: 1234)

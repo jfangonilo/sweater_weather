@@ -30,8 +30,8 @@ class DirectionsService
   private
 
   def get_json
-    response = conn.get
-    JSON.parse(response.body, symbolize_names: true)
+    @response ||= conn.get
+    JSON.parse(@response.body, symbolize_names: true)
   end
 
   def conn
