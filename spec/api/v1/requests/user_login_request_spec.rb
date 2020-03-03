@@ -13,7 +13,7 @@ RSpec.describe 'Sweater Weather API' do
       expect(response).to be_successful
       expect(response.status).to be 200
       key = JSON.parse(response.body, symbolize_names: true)
-      expect(key[:data][:attributes][:api_key]).to be '1234'
+      expect(key[:data][:attributes][:api_key]).to eq '1234'
     end
   end
 end
