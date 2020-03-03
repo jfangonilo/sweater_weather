@@ -10,6 +10,14 @@ class DirectionsService
     get_json[:routes][0][:legs][0][:duration][:text]
   end
 
+  def destination_coordinates
+    get_json[:routes][0][:legs][0][:end_location]
+  end
+
+  def unix_travel_time
+    get_json[:routes][0][:legs][0][:duration][:value]
+  end
+
   private
 
   def get_json
