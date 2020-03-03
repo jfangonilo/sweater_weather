@@ -13,10 +13,6 @@ class RoadTripFacade
     directions.travel_time
   end
 
-  def arrival_forecast
-    arrival_temp + " " + arrival_summary
-  end
-
   def arrival_temp
     darksky.future[:currently][:temperature].to_s
   end

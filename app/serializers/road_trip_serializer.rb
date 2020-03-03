@@ -3,5 +3,6 @@ class RoadTripSerializer
   attributes  :origin,
               :destination,
               :travel_time,
-              :arrival_forecast
+              :arrival_temp,
+              :arrival_summary
 end
