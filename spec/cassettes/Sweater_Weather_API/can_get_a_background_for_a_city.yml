@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 03 Mar 2020 16:46:25 GMT
+      - Tue, 03 Mar 2020 17:17:18 GMT
       Server:
       - Apache/2.4.41 (Ubuntu)
       X-Content-Type-Options:
@@ -35,11 +35,11 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 293a9175ae9a36207f1dd58def51e062.cloudfront.net (CloudFront)
+      - 1.1 010086e284fd9714db3b3e3d1d295b60.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD51-C3
+      - ORD51-C1
       X-Amz-Cf-Id:
-      - gpgcnXjCl31iJXwQnzRoCUhlaaKISnNvzSxUBOJ6luI-U0xeTBM0FA==
+      - W6lrCrzmI5mnPz87vhmnReLyLg7KqzOM1Ey8Y9Rvm741Pw_4D6gi9Q==
     body:
       encoding: UTF-8
       string: '{"photos":{"page":1,"pages":1,"perpage":250,"total":"57","photo":[{"id":"43691964192","owner":"8121206@N07","secret":"4ff507454d","server":"930","farm":1,"title":"Denver
@@ -99,5 +99,5 @@ http_interactions:
         Dome","ispublic":1,"isfriend":0,"isfamily":0},{"id":"537177821","owner":"93174672@N00","secret":"80e5c8e69e","server":"1015","farm":2,"title":"Denver
         Colorado State Capitol Building","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
     http_version: null
-  recorded_at: Tue, 03 Mar 2020 16:46:25 GMT
+  recorded_at: Tue, 03 Mar 2020 17:17:18 GMT
 recorded_with: VCR 5.1.0

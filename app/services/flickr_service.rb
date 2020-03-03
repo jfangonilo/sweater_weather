@@ -6,8 +6,8 @@ class FlickrService
   end
 
   def backgrounds
-    response = conn.get
-    JSON.parse(response.body, symbolize_names: true)
+    @response ||= conn.get
+    JSON.parse(@response.body, symbolize_names: true)
   end
 
   private

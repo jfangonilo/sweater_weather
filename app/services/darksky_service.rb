@@ -8,13 +8,13 @@ class DarkskyService
   end
 
   def future
-    response = conn.get("#{ENV['DARKSKY_KEY']}/#{lat},#{lng},#{arrival}")
-    JSON.parse(response.body, symbolize_names: true)
+    @future_response ||= conn.get("#{ENV['DARKSKY_KEY']}/#{lat},#{lng},#{arrival}")
+    JSON.parse(@future_response.body, symbolize_names: true)
   end
 
   def current
-    response = conn.get("#{ENV['DARKSKY_KEY']}/#{lat},#{lng}")
-    JSON.parse(response.body, symbolize_names: true)
+    @current_response ||= conn.get("#{ENV['DARKSKY_KEY']}/#{lat},#{lng}")
+    JSON.parse(@current_response.body, symbolize_names: true)
   end
 
   private

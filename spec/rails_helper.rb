@@ -7,9 +7,11 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-require 'support/factory_bot.rb'
-require 'vcr'
 require 'webmock/rspec'
+require 'vcr'
+
+require 'support/factory_bot.rb'
+require 'support/shoulda_matchers.rb'
 
 VCR.configure do |config|
   config.ignore_localhost = true
@@ -17,18 +19,10 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
   config.filter_sensitive_data("<FLICKR_KEY>") { ENV['FLICKR_KEY'] }
-  config.filter_sensitive_data("<GOODLE_GEOCODING_KEY>") { ENV['GOODLE_GEOCODING_KEY'] }
+  config.filter_sensitive_data("<GOOGLE_GEOCODING_KEY>") { ENV['GOOGLE_GEOCODING_KEY'] }
   config.filter_sensitive_data("<GOOGLE_DIRECTIONS_KEY>") { ENV['GOOGLE_DIRECTIONS_KEY'] }
   config.filter_sensitive_data("<DARKSKY_KEY>") { ENV['DARKSKY_KEY'] }
   config.filter_sensitive_data("<YELP_KEY>") { ENV['YELP_KEY'] }
-end
-
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-
-    with.library :rails
-  end
 end
 
 # Add additional requires below this line. Rails is not loaded until this point!
