@@ -15,5 +15,19 @@ RSpec.describe 'Sweater Weather API' do
       key = JSON.parse(response.body, symbolize_names: true)
       expect(key[:data][:attributes][:api_key]).to eq '1234'
     end
+
+    it 'and returns an error if credentials bad' do
+      create(:user, email: 'whatever@example.com', password: 'password', api_key: '1234')
+
+      mock_data = {
+        "email": "whatever@example.com",
+        "password": "password1",
+      }.to_json
+
+      post "/api/v1/users", params: mock_data, headers: { "CONTENT_TYPE" => "application/json" }
+      expect(response.status).to be 400
+      result = JSON.parse(response.body, symbolize_names: true)
+      expect(result[:data]).to eq 'Bad Credentials'
+    end
   end
 end
