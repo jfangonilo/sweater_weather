@@ -24,8 +24,8 @@ RSpec.describe 'Sweater Weather API' do
         "password": "password1",
       }.to_json
 
-      post "/api/v1/users", params: mock_data, headers: { "CONTENT_TYPE" => "application/json" }
-      expect(response.status).to be 400
+      post "/api/v1/sessions", params: mock_data, headers: { "CONTENT_TYPE" => "application/json" }
+      expect(response.status).to be 401
       result = JSON.parse(response.body, symbolize_names: true)
       expect(result[:data]).to eq 'Bad Credentials'
     end
