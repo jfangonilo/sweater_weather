@@ -18,8 +18,8 @@ class FlickrService
       f.params[:method] = 'flickr.photos.search'
       f.params[:api_key] = ENV['FLICKR_KEY']
       f.params[:geo_context] = 2 #outdoors
-      f.params[:text] = "#{location}"
-      f.params[:tags] = "#{location},skyline,weather,city"
+      f.params[:text] = "#{location} skyline"
+      f.params[:tags] = "#{location} skyline city"
       f.params[:format] = 'json'
       f.params[:nojsoncallback] = 1
       f.params[:safe_search] = 1
