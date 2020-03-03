@@ -1,4 +1,8 @@
 class WeatherDetails
+  attr_reader :summary,
+              :feels_like,
+              :humidity,
+              :uv_index
 
   def initialize(forecast)
     @summary = forecast[:currently][:summary]

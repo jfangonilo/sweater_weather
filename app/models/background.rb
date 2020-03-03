@@ -1,5 +1,10 @@
 class Background
-  attr_reader :id, :owner, :secret, :server, :farm, :title
+  attr_reader :id,
+              :owner,
+              :secret,
+              :server,
+              :farm,
+              :title
 
   def initialize(data)
     @id = data[:id]
