@@ -1,5 +1,6 @@
 class DirectionsService
-  attr_reader :origin, :destination
+  attr_reader :origin,
+              :destination
 
   def initialize(origin, destination)
     @origin = origin
@@ -12,6 +13,14 @@ class DirectionsService
 
   def destination_coordinates
     get_json[:routes][0][:legs][0][:end_location]
+  end
+
+  def origin_address
+    get_json[:routes][0][:legs][0][:start_address]
+  end
+
+  def destination_address
+    get_json[:routes][0][:legs][0][:end_address]
   end
 
   def unix_travel_time

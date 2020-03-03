@@ -9,6 +9,14 @@ class RoadTripFacade
     @destination = params[:destination]
   end
 
+  def origin_address
+    directions.origin_address
+  end
+
+  def destination_address
+    directions.destination_address
+  end
+
   def travel_time
     directions.travel_time
   end
