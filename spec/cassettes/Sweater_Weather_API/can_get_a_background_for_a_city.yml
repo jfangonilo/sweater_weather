@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest?api_key=<FLICKR_KEY>&content_type=1&format=json&geo_context=2&method=flickr.photos.search&nojsoncallback=1&safe_search=1&tags=denver,co%20skyline%20city&text=denver,co%20skyline
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 03 Mar 2020 16:46:25 GMT
+      Server:
+      - Apache/2.4.41 (Ubuntu)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 293a9175ae9a36207f1dd58def51e062.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - gpgcnXjCl31iJXwQnzRoCUhlaaKISnNvzSxUBOJ6luI-U0xeTBM0FA==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":1,"perpage":250,"total":"57","photo":[{"id":"43691964192","owner":"8121206@N07","secret":"4ff507454d","server":"930","farm":1,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"43261941242","owner":"11581147@N06","secret":"9d1cd14c20","server":"844","farm":1,"title":"Jefferson
+        County, Colorado Sheriff_P1030176c","ispublic":1,"isfriend":0,"isfamily":0},{"id":"43261940402","owner":"11581147@N06","secret":"083afb5389","server":"1786","farm":2,"title":"Denver
+        Skyline from CO-93_P1030095c","ispublic":1,"isfriend":0,"isfamily":0},{"id":"38743877730","owner":"25273938@N03","secret":"16ff5076b3","server":"4623","farm":5,"title":"Whitetail
+        Buck and the Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"40507202451","owner":"25273938@N03","secret":"25e1738b89","server":"4604","farm":5,"title":"The
+        Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"32178799764","owner":"23742495@N07","secret":"358ab3a9fe","server":"479","farm":1,"title":"City
+        Park LE","ispublic":1,"isfriend":0,"isfamily":0},{"id":"32878705161","owner":"23742495@N07","secret":"a6e86a7295","server":"2712","farm":3,"title":"Speer
+        BLVD HDR","ispublic":1,"isfriend":0,"isfamily":0},{"id":"31810353975","owner":"35836431@N00","secret":"5f23b6d77a","server":"570","farm":1,"title":"Denver
+        area","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29112449541","owner":"25273938@N03","secret":"990606dc24","server":"8320","farm":9,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"27294687991","owner":"73452868@N04","secret":"c2408dbfe6","server":"7318","farm":8,"title":"Civic
+        Center Amphitheater","ispublic":1,"isfriend":0,"isfamily":0},{"id":"27331792256","owner":"73452868@N04","secret":"0e5df773a2","server":"7306","farm":8,"title":"Office
+        buildings","ispublic":1,"isfriend":0,"isfamily":0},{"id":"16980083570","owner":"24672027@N06","secret":"1663525260","server":"8705","farm":9,"title":"Denver,
+        Colorado","ispublic":1,"isfriend":0,"isfamily":0},{"id":"16761190957","owner":"88913562@N00","secret":"9a055c70b1","server":"7603","farm":8,"title":"Compressed
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"15767992161","owner":"127908438@N06","secret":"ea2998ae79","server":"7514","farm":8,"title":"Denver
+        at Night","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8117429947","owner":"9607676@N05","secret":"07f1bf8fbd","server":"8049","farm":9,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7522642578","owner":"26017622@N08","secret":"fa8bb9055b","server":"7118","farm":8,"title":"Denver,
+        17th & Glenarm","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6287274553","owner":"59126773@N08","secret":"fcba4f8145","server":"6118","farm":7,"title":"Denver
+        Skyline - Film Photograph; Denver, Colorado","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118932517","owner":"97355281@N00","secret":"530bb77fbc","server":"6082","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118931773","owner":"97355281@N00","secret":"651b2b158a","server":"6090","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118931031","owner":"97355281@N00","secret":"cc63a0037b","server":"6082","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118930259","owner":"97355281@N00","secret":"4bab29b68a","server":"6199","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118915567","owner":"97355281@N00","secret":"6534b297d5","server":"6074","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6119458460","owner":"97355281@N00","secret":"3a6a066cd0","server":"6192","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6119430444","owner":"97355281@N00","secret":"9c6b6bce55","server":"6083","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118878147","owner":"97355281@N00","secret":"0e9286a4ce","server":"6075","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6119418954","owner":"97355281@N00","secret":"3a34389c18","server":"6210","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6119416502","owner":"97355281@N00","secret":"d4f01fe861","server":"6069","farm":7,"title":"Denver
+        City Cable Railway","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6119415644","owner":"97355281@N00","secret":"2946d8d5b4","server":"6075","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118869287","owner":"97355281@N00","secret":"6012317d5d","server":"6199","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118857837","owner":"97355281@N00","secret":"401ba7c33f","server":"6077","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118852857","owner":"97355281@N00","secret":"59a1f3396d","server":"6071","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6118852635","owner":"97355281@N00","secret":"983b7658f8","server":"6197","farm":7,"title":"Downtown
+        Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5324097991","owner":"29861761@N08","secret":"7439095618","server":"5244","farm":6,"title":"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5316601715","owner":"29861761@N08","secret":"8d8c390b4f","server":"5285","farm":6,"title":"Newcastle
+        Brown Ale","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4949757764","owner":"26355192@N02","secret":"2496c1168e","server":"4090","farm":5,"title":"IMG_0854
+        copy","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4930438414","owner":"43146960@N00","secret":"7f5066ee58","server":"4139","farm":5,"title":"Denver
+        skyline from City Park","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4320675133","owner":"91357526@N00","secret":"5ab33c1bda","server":"2745","farm":3,"title":"Denver
+        Skyline & Sunset, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4302009419","owner":"91357526@N00","secret":"69fd64b095","server":"4029","farm":5,"title":"Denver
+        Skyline at Night, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4223753110","owner":"91357526@N00","secret":"79f9488d24","server":"2569","farm":3,"title":"Denver
+        Skyline at dusk, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4039016544","owner":"91357526@N00","secret":"9f94b319da","server":"2553","farm":3,"title":"Denver
+        Skyline at dusk, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4006733589","owner":"91357526@N00","secret":"b135333c78","server":"2572","farm":3,"title":"Skyline
+        & Sunset, Denver, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3546099334","owner":"14481705@N04","secret":"bfbb2a47ae","server":"2433","farm":3,"title":"Denver
+        09 - Towering - 5-4-09","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3353086651","owner":"93174672@N00","secret":"d47f26c03e","server":"3129","farm":4,"title":"Dutch
+        Colonial Revival styled home","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3339692326","owner":"28309724@N05","secret":"3b5ae6776b","server":"3647","farm":4,"title":"Streak
+        in the sky","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3338843427","owner":"28309724@N05","secret":"e27e57f26f","server":"3650","farm":4,"title":"Denver
+        at night","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3338836467","owner":"28309724@N05","secret":"453c3c64dd","server":"3369","farm":4,"title":"Nighttime
+        Denver skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3153573303","owner":"93174672@N00","secret":"1cf8781bbc","server":"3157","farm":4,"title":"MOSQUE
+        OF THE EL JEBEL SHRINE TEMPLE-1770 Sherman Street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3013114002","owner":"89461633@N00","secret":"9c90206ca6","server":"3058","farm":4,"title":"Denver
+        northward","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3012276019","owner":"89461633@N00","secret":"ab8f9e5d5d","server":"3202","farm":4,"title":"Republic
+        Plaza","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2815456747","owner":"28277802@N00","secret":"1998fc49a5","server":"3108","farm":4,"title":"Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2725668918","owner":"93174672@N00","secret":"600539172d","server":"3231","farm":4,"title":"A
+        Dutch Colonial Revival House at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2605122186","owner":"93174672@N00","secret":"e761261fae","server":"3282","farm":4,"title":"DENVER
+        CITY AND COUNTY BUILDING, DENVER","ispublic":1,"isfriend":0,"isfamily":0},{"id":"1039135120","owner":"93174672@N00","secret":"3e82a19c16","server":"1136","farm":2,"title":"Denver
+        Skyline through the CHEESMAN PARK Pavillion","ispublic":1,"isfriend":0,"isfamily":0},{"id":"564359552","owner":"93174672@N00","secret":"8602fdd2b5","server":"1154","farm":2,"title":"BROWN
+        PALACE HOTEL-17th & Tremont Place","ispublic":1,"isfriend":0,"isfamily":0},{"id":"564333352","owner":"93174672@N00","secret":"faf2025fcb","server":"1223","farm":2,"title":"TRAMWAY
+        BUILDING (Teatro Hotel)-1100 14th Street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"537177847","owner":"93174672@N00","secret":"d3e68300a6","server":"1284","farm":2,"title":"Golden
+        Dome","ispublic":1,"isfriend":0,"isfamily":0},{"id":"537177821","owner":"93174672@N00","secret":"80e5c8e69e","server":"1015","farm":2,"title":"Denver
+        Colorado State Capitol Building","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+    http_version: null
+  recorded_at: Tue, 03 Mar 2020 16:46:25 GMT
+recorded_with: VCR 5.1.0

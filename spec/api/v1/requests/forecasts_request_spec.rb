@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Sweather Weather API" do
+RSpec.describe "Sweater Weather API", :vcr do
   it 'can get a forecast for a city' do
     city = 'denver,co'
 
