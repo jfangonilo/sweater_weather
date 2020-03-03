@@ -12,7 +12,7 @@ class DarkskyService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def result
+  def current
     response = conn.get("#{ENV['DARKSKY_KEY']}/#{lat},#{lng}")
     JSON.parse(response.body, symbolize_names: true)
   end

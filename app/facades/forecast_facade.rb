@@ -37,7 +37,7 @@ class ForecastFacade
   end
 
   def forecast
-    darksky.result
+    darksky.current
   end
 
   def geocode
