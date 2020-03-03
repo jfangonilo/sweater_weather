@@ -1,22 +1,25 @@
 # Sweater Weather
-Sweater Weather is a back end solo project that consumes multiple APIs to expose geocode, weather, and photograph data in JSON 1.0 to a hypothetical front end.
+Sweater Weather is a [Turing](https://turing.io/) back end solo project that consumes multiple APIs to expose geocode, weather, and photograph data in JSON 1.0 to a hypothetical front end.
 
 ## APIs consumed
-Google Geocoding
-Google Directions
-Flickr Images
-Darksky Weather
+[Google Geocoding](https://developers.google.com/maps/documentation/geocoding/intro)
+
+[Google Directions](https://developers.google.com/maps/documentation/directions/intro)
+
+[Flickr Images](https://www.flickr.com/services/developer/api/)
+
+[Darksky Weather](https://darksky.net/dev)
 
 ## Endpoints
 
-#### Forecast
+### Forecast
 `GET /api/v1/forecast`
 
 | Params | Example |
 | --- | --- |
 | location | Denver,CO |
 
-```
+```JSON
 {
     "data": {
         "id": null,
@@ -112,13 +115,13 @@ Darksky Weather
 }
 ```
 
-#### Backgrounds
+### Backgrounds
 `GET /api/v1/backgrounds`
 | Params | Example |
 | --- | --- |
 | location | Denver,CO |
 
-```
+```JSON
 {
     "data": {
         "id": null,
@@ -130,7 +133,7 @@ Darksky Weather
 }
 ```
 
-#### User Registration
+### User Registration
 `POST /api/v1/users`
 | Params | Example |
 | --- | --- |
@@ -138,7 +141,7 @@ Darksky Weather
 | password | password |
 | password_confirmation | password |
 
-```
+```JSON
 {
     "data": {
         "id": "1",
@@ -150,14 +153,14 @@ Darksky Weather
 }
 ```
 
-#### User Login
+### User Login
 `POST /api/v1/sessions`
 | Params | Example |
 | --- | --- |
 | email | whatever@example.com |
 | password | password |
 
-```
+```JSON
 {
     "data": {
         "id": "1",
@@ -169,15 +172,15 @@ Darksky Weather
 }
 ```
 
-#### Road Trip
+### Road Trip
 `POST /api/v1/road_trip`
 | Params | Example |
 | --- | --- |
-| api_key | LVIaR45esquCGM9Xrvf94w |
+| api_key | XDhsJoU3yLHn3u11FZGPmGXj |
 | origin | Denver,CO |
 | destination | Pueblo,CO |
 
-```
+```JSON
 {
     "data": {
         "id": null,
